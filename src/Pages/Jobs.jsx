@@ -4,7 +4,7 @@ import Job from "./../Components/Job";
 
 function Jobs() {
     return (
-        <div className="h-screen w-screen bg-white">
+        <div className="h-full w-full bg-white">
             <section className="jobSearchHeader h-48 w-screen bg-slate-700 text-white">
                 <h1 className="font-medium monospace text-3xl flex justify-center py-5">Job Findr</h1>
                 <form className="flex items-center justify-center">

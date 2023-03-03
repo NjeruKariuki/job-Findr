@@ -7,7 +7,7 @@ import About from "./Pages/About";
 function App() {
   return (
     <BrowserRouter>
-      <main>
+      <main className="w-screen h-screen">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="about" element={<About />} />

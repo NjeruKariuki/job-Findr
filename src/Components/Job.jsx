@@ -2,7 +2,7 @@ import React from 'react'
 
 function Job() {
     return (
-        <div className="jobCard h-auto w-full md:my-16 md:w-3/4 bg-slate-600 rounded p-5 text-white font-mono">
+        <div className="jobCard h-full w-3/4 md:my-16 md:w-3/4 bg-slate-600 rounded p-5 text-white font-mono">
             <h3 className="text-xl ">Senior Software Engineer</h3>
             <hr />
             <br />
@@ -14,7 +14,7 @@ function Job() {
                     <button className="hover:bg-white hover:text-black hover:border-black hover:border-2 border border-white p-2 rounded" type="text">Javascript</button>
                     <button className="hover:bg-white hover:text-black hover:border-black hover:border-2 border border-white p-2 rounded" type="text">Tailwind</button>
                 </span>
-                <button className="lg:hidden border border-white p-2 rounded-sm" type="text">Django</button>
+                <button className="lg:hidden md:hidden border border-white hover:bg-white hover:text-black hover:border-black hover:border-2 p-2 rounded-sm" type="text">Django</button>
                 <p>Nairobi, Kenya</p>
             </span>
         </div>
