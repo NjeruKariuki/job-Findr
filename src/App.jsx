@@ -2,6 +2,7 @@ import { createBrowserRouter, createRoutesFromElements, RouterProvider, Route } 
 import Home from "./Pages/Home";
 import About from "./Pages/About";
 import RootLayout from "./layouts/RootLayout";
+import HelpLayout from "./layouts/HelpLayout";
 
 
 function App() {
@@ -10,11 +11,15 @@ function App() {
       <Route path="/" element={<RootLayout />}>
         <Route index element={<Home />} />
         <Route path="about" element={<About />} />
+        <Route path="help" element={<HelpLayout />}>
+          <Route path="faq" element={  } />
+          <Route path="contact" element={ } />
+        </Route>
       </Route>
     )
-)
+  )
   return (
-      <RouterProvider router={router} />
+    <RouterProvider router={router} />
   )
 }
 
