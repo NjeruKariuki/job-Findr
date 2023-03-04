@@ -3,6 +3,8 @@ import Home from "./Pages/Home";
 import About from "./Pages/About";
 import RootLayout from "./layouts/RootLayout";
 import HelpLayout from "./layouts/HelpLayout";
+import Faqs from "./Pages/help/Faqs";
+import Contact from "./Pages/help/Contact";
 
 
 function App() {
@@ -12,8 +14,8 @@ function App() {
         <Route index element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="help" element={<HelpLayout />}>
-          <Route path="faq" element={  } />
-          <Route path="contact" element={ } />
+          <Route path="faq" element={<Faqs /> } />
+          <Route path="contact" element={<Contact /> } />
         </Route>
       </Route>
     )

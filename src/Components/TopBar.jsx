@@ -20,6 +20,8 @@ function TopBar() {
                 <span className={`flex flex-col py-2 justify-between md:flex md:flex-row md:justify-between md:space-x-6 ${open ? "hidden": null}`}>
                     <NavLink to="/"><span className='hover:text-red-700 transition-all duration-500' activeStyle={{backgroundColor: "bg-red-400", color: "red"}}>Home</span></NavLink>
                     <NavLink to="about"><span className='hover:text-red-700 transition-all duration-500'>About Us</span></NavLink>
+                    <NavLink to="help"><span className='hover:text-red-700 transition-all duration-500'>Help</span></NavLink>
+
                 </span>
             </div>
         </nav>
