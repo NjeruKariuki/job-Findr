@@ -24,7 +24,7 @@ function Home() {
       <section className="jobPostings bg-slate-200 h-100vh w-screen flex flex-col items-center p-3 space-y-6 py-6">
         {careers.map(career => (
           <Job
-            key={career.id},
+            key={career.id}
             title={career.title}
             description={career.description}
             location={career.location}
