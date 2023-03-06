@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 function Job(props) {
     return (
         <div className="jobCard h-full w-3/4 md:my-16 md:w-3/4 bg-slate-600 rounded p-5 text-white font-mono">
-            <Link to={props.url}><h3 className="text-xl ">{props.title}</h3></Link>
+            <Link to={props.url}><h3 className="text-xl hover:text-red-600 duration-300 transition-all">{props.title}</h3></Link>
             <hr />
             <br />
             <p className="">{props.description}</p>

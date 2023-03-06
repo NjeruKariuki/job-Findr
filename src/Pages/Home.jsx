@@ -44,5 +44,9 @@ export default Home
 //loader function
 export const jobsLoader = async () => {
   const res = await fetch('http://localhost:4000/careers')
+
+  if(!res.ok) {
+    throw Error("Couldn't fetch Careers, Please try again later!...");
+  }
   return res.json()
 }
