@@ -2,8 +2,12 @@ import React, { useEffect } from 'react'
 import Job from '../Components/Job';
 import axios from 'axios';
 
-function Home() {
+import { useLoaderData, Link } from 'react-router-dom';
 
+
+function Home() {
+  const careers = useLoaderData();
+  console.log(careers)
   return (
     <div className="h-full w-full bg-white">
       <section className="jobSearchHeader h-auto w-screen bg-slate-700 text-white">
@@ -18,14 +22,26 @@ function Home() {
 
       </section>
       <section className="jobPostings bg-slate-200 h-100vh w-screen flex flex-col items-center p-3 space-y-6 py-6">
-        <Job />
-        <Job />
-        <Job />
-        <Job />
-        <Job />
+        {careers.map(career => (
+          <Job
+            key={career.id},
+            title={career.title}
+            description={career.description}
+            location={career.location}
+            salary={career.salary}
+            skills={career.skills}
+          />
+        ))}
       </section>
     </div>
   )
 }
 
 export default Home
+
+
+//loader function
+export const jobsLoader = async () => {
+  const res = await fetch('http://localhost:4000/careers')
+  return res.json()
+}

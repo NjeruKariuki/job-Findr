@@ -1,0 +1,52 @@
+{
+    "careers": [
+        {
+            "id" : 1,
+            "title": "Senior React Developer",
+            "description" : "You can write clean react code and merge branches",
+            "salary" : 50000,
+            "location" : "Nairobi, Kenya",
+            "skills" : [
+                "react",
+                "javascript",
+                "HTML"
+            ]
+        },
+        {
+            "id" : 2,
+            "title": "Game Developer",
+            "description" : "You can create android apps and games, even on the web. Code and merge branches",
+            "salary" : 65000,
+            "location" : "Nairobi, Kenya",
+            "skills" : [
+                "Unity",
+                "javascript",
+                "C++"
+            ]
+        },
+        {
+            "id" : 3,
+            "title": "HTML Developer",
+            "description" : "You can write clean HMTL/CSS code and merge branches",
+            "salary" : 10000,
+            "location" : "Mombasa, Kenya",
+            "skills" : [
+                "Bootstrap",
+                "CSS",
+                "HTML"
+            ]
+        },
+        {
+            "id" : 4,
+            "title": "Python Developer",
+            "description" : "You can write clean python code, create software and merge branches",
+            "salary" : 50000,
+            "location" : "Kisumu, Kenya",
+            "skills" : [
+                "Python",
+                "javascript",
+                "HTML"
+            ]
+        }
+    ]
+}
