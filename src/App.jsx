@@ -5,6 +5,7 @@ import RootLayout from "./layouts/RootLayout";
 import HelpLayout from "./layouts/HelpLayout";
 import Faqs from "./Pages/help/Faqs";
 import Contact from "./Pages/help/Contact";
+import NotFound from "./Pages/NotFound";
 
 
 function App() {
@@ -17,6 +18,8 @@ function App() {
           <Route path="faq" element={<Faqs /> } />
           <Route path="contact" element={<Contact /> } />
         </Route>
+        
+        <Route path="*" element={<NotFound />} />
       </Route>
     )
   )
