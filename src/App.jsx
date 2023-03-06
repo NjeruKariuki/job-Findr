@@ -14,7 +14,7 @@ function App() {
     createRoutesFromElements(
       <Route path="/" element={<RootLayout />}>
         <Route index loader={jobsLoader} element={<Home />} />
-        <Route path=":id" loader={careerLoader} element={<Career /> } />
+        <Route path="career/:id" loader={careerLoader} element={<Career /> } />
         <Route path="about" element={<About />} />
         <Route path="help" element={<HelpLayout />}>
           <Route path="faq" element={<Faqs />} />

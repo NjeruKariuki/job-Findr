@@ -4,9 +4,14 @@ import { useLoaderData, Link, useNavigate, useParams } from 'react-router-dom'
 function Career() {
     const career = useLoaderData()
     const { id } = useParams();
-    console.log(career)
+    const navigate = useNavigate()
+    const handleBack = (e) => {
+        navigate(-1);
+    }
+
     return (
-        <div>
+        <div className='font-mono flex flex-col justify-center items-center py-36'>
+            <button className='text-2xl bg-slate-500 text-white px-6 py-2 rounded absolute top-12 left-12' onClick={handleBack}><h1>Back</h1></button>
             <div className="Career h-3/4 w-3/4 md:my-16 md:w-3/4 bg-slate-600 rounded p-5 text-white font-mono">
                 <h3 className="text-2xl">{career.title}</h3>
                 <hr />
@@ -24,8 +29,8 @@ function Career() {
                             <button className="hover:bg-white hover:text-black hover:border-black hover:border-2 border border-white p-2 rounded" type="text">{skill}</button>
                         ))}
                     </span>
-                    <button className="lg:hidden md:hidden border border-white hover:bg-white hover:text-black hover:border-black hover:border-2 p-2 rounded-sm" type="text">skill 1</button>
-                    <p>location</p>
+                    <button className="lg:hidden md:hidden border border-white hover:bg-white hover:text-black hover:border-black hover:border-2 p-2 rounded-sm" type="text">{career.skills[0]}</button>
+                    <p>{career.location}</p>
                 </span>
             </div>
         </div>

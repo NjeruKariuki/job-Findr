@@ -2,12 +2,12 @@ import React, { useEffect } from 'react'
 import Job from '../Components/Job';
 import axios from 'axios';
 
-import { useLoaderData, Link } from 'react-router-dom';
+import { useLoaderData } from 'react-router-dom';
 
 
 function Home() {
   const careers = useLoaderData();
-  console.log(careers)
+  let url = "/career/";
   return (
     <div className="h-full w-full bg-white">
       <section className="jobSearchHeader h-auto w-screen bg-slate-700 text-white">
@@ -24,7 +24,8 @@ function Home() {
       <section className="jobPostings bg-slate-200 h-100vh w-screen flex flex-col items-center p-3 space-y-6 py-6">
         {careers.map(career => (
           <Job
-            key={career.id}
+          url = {url + career.id}
+            id={career.id}
             title={career.title}
             description={career.description}
             location={career.location}
