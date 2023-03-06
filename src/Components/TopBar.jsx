@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { NavLink,  } from "react-router-dom";
 
 function TopBar() {
-    let [open, setOpen] = useState(false);
+    let [open, setOpen] = useState(true);
 
     return (
         <nav>
