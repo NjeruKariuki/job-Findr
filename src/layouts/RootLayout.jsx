@@ -1,6 +1,7 @@
 import React from 'react'
 import TopBar from '../Components/TopBar'
 import { Outlet } from 'react-router-dom'
+import Breadcrumps from '../Components/Breadcrumps'
 
 
 function RootLayout() {
@@ -9,6 +10,7 @@ function RootLayout() {
        <header className="bg-slate-800 text-white">
         <TopBar />
       </header>
+      <Breadcrumps />
       <main>
         <Outlet />
       </main>
