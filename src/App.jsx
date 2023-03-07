@@ -4,7 +4,7 @@ import About from "./Pages/About";
 import RootLayout from "./layouts/RootLayout";
 import HelpLayout from "./layouts/HelpLayout";
 import Faqs from "./Pages/help/Faqs";
-import Contact from "./Pages/help/Contact";
+import Contact, { contactAction } from "./Pages/help/Contact";
 import NotFound from "./Pages/NotFound";
 import Career, { careerLoader } from "./Pages/Career";
 import CareerError from "./Pages/Errors/CareerError";
@@ -15,12 +15,12 @@ function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<RootLayout />}>
-        <Route index loader={jobsLoader} element={<Home />} errorElement={<CareersError />}/>
-        <Route path="career/:id" loader={careerLoader} element={<Career /> } errorElement={<CareerError />} />
+        <Route index loader={jobsLoader} element={<Home />} errorElement={<CareersError />} />
+        <Route path="career/:id" loader={careerLoader} element={<Career />} errorElement={<CareerError />} />
         <Route path="about" element={<About />} />
         <Route path="help" element={<HelpLayout />}>
           <Route path="faq" element={<Faqs />} />
-          <Route path="contact" element={<Contact />} />
+          <Route path="contact" action={contactAction} element={<Contact />} />
         </Route>
 
         <Route path="*" element={<NotFound />} />
